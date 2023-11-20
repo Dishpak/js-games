@@ -44,10 +44,6 @@ const restartGame = () => {
   })
 }
 
-const rollDice = () => {
-  return Math.floor(Math.random() * 6) + 1;
-}
-
 const switchPlayer = () => {
   player1.classList.toggle('player--active');
   player2.classList.toggle('player--active')
@@ -61,7 +57,7 @@ diceButton.addEventListener('click', () => {
     playerNames[i] = document.querySelector(`.name--${i}`).value || `Player ${i + 1}`
   }
   resultNumber = Number(document.querySelector('#points').value);
-  const diceResult = rollDice();
+  const diceResult = Math.floor(Math.random() * 6) + 1;
   if (resultNumber > 0) {
     dice.src = `dice-${diceResult}.png`;
   } else {
