@@ -60,10 +60,8 @@ diceButton.addEventListener('click', () => {
   for(let i = 0; i < 2; i++) {
     playerNames[i] = document.querySelector(`.name--${i}`).value || `Player ${i + 1}`
   }
-  console.log(playerNames);
   resultNumber = Number(document.querySelector('#points').value);
   const diceResult = rollDice();
-  console.log(diceResult);
   if (resultNumber > 0) {
     dice.src = `dice-${diceResult}.png`;
   } else {
